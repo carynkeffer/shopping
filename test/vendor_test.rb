@@ -8,5 +8,6 @@ class VendorTest < Minitest::Test
 
     assert_instance_of Vendor, vendor
     assert_equal "Rocky Mountain Fresh", vendor.name
+    assert_instance_of Hash, vendor.inventory
   end
 end
