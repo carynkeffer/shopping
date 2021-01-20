@@ -23,9 +23,4 @@
      end
    end
 
-   def potential_revenue
-     @vendors.each do |vendor|
-     # the sum of vendors' item's price * quantity
-    end
-   end
  end
