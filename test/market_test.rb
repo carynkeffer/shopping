@@ -12,4 +12,14 @@ class MarketTest < Minitest::Test
     assert_equal "South Pearl Street Farmers Market", market.name
     assert_equal [], market.vendors
   end
+
+  def test_market_can_add_vendors
+    market = Market.new("South Pearl Street Farmers Market")
+
+    vendor1 = Vendor.new("Rocky Mountain Fresh")
+
+    market.add_vendor(vendor1)
+
+    assert_equal [vendor1], market.vendors
+  end
 end
