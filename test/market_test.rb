@@ -149,7 +149,7 @@ class MarketTest < Minitest::Test
     }
 
     assert_equal expected, market.total_inventory
-    assert_equal market.overstocked_items
-    
+    assert_equal [item1], market.overstocked_items
+    assert_equal ["Banana Nice Cream", "Peach", "Peach-Raspberry Nice Cream", "Tomato"], market.sorted_item_list
   end
 end

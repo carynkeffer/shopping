@@ -27,12 +27,12 @@
      total_inventory = {}
 
      @vendors.each do |vendor|
-       vendor.inventory.each do |item, quantity|
+       vendor.inventory.each do |item, quant|
          if total_inventory[item].nil?
           total_inventory[item] = {quantity: 0, vendors: []}
         end
 
-         total_inventory[item][:quantity] += quantity
+         total_inventory[item][:quantity] += quant
          total_inventory[item][:vendors].push(vendor)
        end
      end
@@ -45,6 +45,10 @@
        overstocked << item if (info[:quantity] > 50) && (info[:vendors].count > 1)
      end
      overstocked
+   end
+
+   def sorted_item_list
+     require "pry"; binding.pry
    end
 
  end
