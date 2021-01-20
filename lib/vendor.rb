@@ -9,6 +9,6 @@ class Vendor
   end
 
   def check_stock(item)
-    require "pry"; binding.pry
+    0
   end
 end
