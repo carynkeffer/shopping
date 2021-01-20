@@ -44,9 +44,11 @@ class VendorTest < Minitest::Test
     vendor.stock(item1, 30)
     vendor.stock(item1, 25)
 
-    expected = {item1 => 55}
+    vendor.stock(item2, 12)
 
-    # assert_equal expected, vendor.inventory
+    # expected = {item1 => 55}
+
     assert_equal 55, vendor.check_stock(item1)
+        # assert_equal expected, vendor.inventory
   end
 end
