@@ -7,4 +7,8 @@ class Vendor
     @name = name
     @inventory = Hash.new
   end
+
+  def check_stock(item)
+    require "pry"; binding.pry
+  end
 end

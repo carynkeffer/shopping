@@ -1,6 +1,7 @@
 require 'minitest/pride'
 require 'minitest/autorun'
 require './lib/vendor'
+require './lib/item'
 
 class VendorTest < Minitest::Test
   def test_it_exists_and_has_attributes
