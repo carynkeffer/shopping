@@ -149,5 +149,7 @@ class MarketTest < Minitest::Test
     }
 
     assert_equal expected, market.total_inventory
+    assert_equal market.overstocked_items
+    
   end
 end
